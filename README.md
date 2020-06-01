@@ -1,2 +1,0 @@
-# studybootstrap
-my bootstrap
