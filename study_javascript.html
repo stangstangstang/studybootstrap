@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习java-script</title>
+</head>
+<body>
+    <script>
+        function SayHello(name){
+        document.writeln("Hello world!",name);
+        alert("Hello world");
+        }
+
+        SayHello("huanghe")
+
+        var study_var =function(name){
+            var char1 = "字符串";
+            var int1 = 15;
+            var float1 = 3.1415926;
+            age = 23;
+            var cars = new Array("a","b","c")
+            document.writeln(char1);
+            document.writeln(float1);
+            document.writeln(int1);
+            document.writeln(age);
+            document.writeln(age);
+            document.writeln(name);
+        }("huangdami");
+
+        var sum = function(start,end){
+            var s = 0;
+            var i;
+            for(i=start;i<=end;i++){
+                s=s+i;                
+            }
+            document.writeln("sum = ",s)
+        }(1,100)
+        
+        var sum = function(start,end){
+            var s = 0;
+            var i = start;
+            while(i<=100){
+                if(i%2==1){
+                    s += i;
+                }
+                i++;   
+            }
+            document.writeln("use while sum = ",s)
+        }(1,100)
+
+        //study_var()
+        document.writeln("<br>");
+        document.writeln(age);
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln("<br>");
+        
+
+        //这是一条函数
+        var for_in=function(arr){
+            for(var each in arr){
+              document.writeln("<br>");
+              document.writeln("arr["+each+"]"+arr[each]);
+            }
+          }(new Array("a","test",1,3,1415,[1,2,3,4,5]))
+
+
+        //这是一条函数
+          var static_person={
+            name:"zjf",
+            birth:1980,
+            school:"zjbc",
+            height:1.70,
+            weight:65,
+            scroe:null
+          }
+          document.writeln("<br>");
+          document.writeln(static_person.name+'<br>');
+          document.writeln(static_person.school+'<br>');
+          delete static_person.school;
+          document.writeln(static_person.school+'<br>');
+          static_person.in_school="flase";
+          document.writeln(static_person.in_school);
+        //这是一条函数
+        var dynamic_person = new Object();
+        dynamic_person.name = "xiaohuang";
+        dynamic_person.eat = function(){
+            alert(dynamic_person.name+"吃肉");
+        }
+        dynamic_person.eat();
+        //这是一条函数
+        var function_person = function (name) {
+            this.name = name;
+            this.eat = function () {
+                alert(dynamic_person.name + "吃菜");
+            }
+        }
+
+        var p=new function_person("xiaohuang");
+        p.eat();
+
+    </script>
+
+
+
+</body>
+</html>
